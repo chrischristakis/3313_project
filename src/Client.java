@@ -15,9 +15,14 @@ public class Client {
 			
 			int port;
 			
+			System.out.println("Please enter an IP to connect to: ");
+			String ip = consoleReader.readLine();
+			
 			//get port input.
 			while(true)
 			{
+				
+				
 				System.out.println("Please enter a port to connect to: ");
 				try {
 					String input = consoleReader.readLine();
@@ -34,7 +39,7 @@ public class Client {
 			Socket socket;
 			try 
 			{
-				socket=new Socket("localhost",port);
+				socket=new Socket(ip,port);
 			} 
 			catch(IOException e)
 			{
